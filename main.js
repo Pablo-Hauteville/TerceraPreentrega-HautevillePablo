@@ -130,6 +130,8 @@ const respuestaClick = ()=> {
    /*  console.log("click") */
 }
 
+inputText.addEventListener("click", ()=> {})
+
 /* botonBuscar.addEventListener("click", () => {
     const valorBusqueda = inputText.value.trim();
     buscarProducto(valorBusqueda);
@@ -147,7 +149,7 @@ function renderizarProductos() {
         const divCard = document.createElement('div');
         divCard.classList.add('card');
         divCard.innerHTML += `
-			<img src="./images/${producto.img}" alt="${producto.nombre} class=img "/>
+			<img src="./images/${producto.img}" alt="${producto.nombre}" class="img"/>
 			<h4>${producto.nombre}</h4>
 			<p>$${producto.precio}</p>
 			<a id=${producto.id} class="boton-agregar-carrito" href="#">Agregar al carrito</a>
