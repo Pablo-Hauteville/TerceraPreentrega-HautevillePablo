@@ -1,0 +1,53 @@
+.search-container {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  #searchInput {
+    width: 500px;
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5p;
+  }
+  
+  #searchButton {
+    padding: 5px 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #containerProductos {
+    width: 80%;
+    max-width: 1200px;
+    height: 430px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: auto;
+}
+  
+  
+  .card {
+    width: 300px;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #080101;
+    border-radius: 15px;
+  }
+  
+  .carrito {
+    width: 50px;
+  }
+
+  .boton-agregar-carrito {
+        color: rgb(85, 151, 30);
+
+  }
+  
+  
+  
