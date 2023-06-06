@@ -127,22 +127,43 @@ const containerProductos = document.getElementById ("containerProductos");
 
 
 const respuestaClick = ()=> {
-   /*  console.log("click") */
+    console.log("click")
 }
+/* eventos */
 
-inputText.addEventListener("click", ()=> {})
-
-/* botonBuscar.addEventListener("click", () => {
+carritoIcon.addEventListener("click",respuestaClick);
+botonBuscar.addEventListener("click", () => {
     const valorBusqueda = inputText.value.trim();
     buscarProducto(valorBusqueda);
-  }); */
+  });
+  
+inputText.addEventListener("click", () => {
+    /* prueba con console.log */
+    console.log("imput click");
+  });
 
-/* evento */
-botonBuscar.addEventListener("click",respuestaClick);
-carritoIcon.addEventListener("click",respuestaClick);
-inputText.addEventListener("click",respuestaClick);
+/* Función buscar producto ejecuta luego del evento del "botonBuscar" */
 
+function buscarProducto(valor) {
+    const productoEncontrado = productos.filter((producto) => {
+      for (let clave in producto) {
+        if (producto[clave].toString().toLowerCase().includes(valor.toLowerCase())) {
+          return true;
+        }
+      }
+      return false;
+    });
+  
+    if (productoEncontrado.length > 0) {
+        /* prueba con console.log */
+      console.log(productoEncontrado);
+    } else {
+        /* prueba con console.log */
+      console.log("No se encontró producto}");
+    }
+  }
 
+/* Función renderizarProductos hace aparecer las cards que contiene la información de cada producto */
 
 function renderizarProductos() {
     productos.forEach((producto) => {
@@ -151,7 +172,7 @@ function renderizarProductos() {
         divCard.innerHTML += `
 			<img src="./images/${producto.img}" alt="${producto.nombre}" class="img"/>
 			<h4>${producto.nombre}</h4>
-			<p>$${producto.precio}</p>
+			<p>US$${producto.precio}</p>
 			<a id=${producto.id} class="boton-agregar-carrito" href="#">Agregar al carrito</a>
         `;
 
