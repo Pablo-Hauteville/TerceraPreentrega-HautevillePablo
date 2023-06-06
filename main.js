@@ -123,7 +123,8 @@ const botonBuscar = document.getElementById("searchButton");
 const inputText = document.getElementById("searchInput")
 const carritoIcon = document.getElementsByClassName("carrito")[0];
 const containerProductos = document.getElementById ("containerProductos");
-
+const modalCarrito = document.getElementById("ventanaModal");
+let productosCarrito = []
 
 
 const respuestaClick = ()=> {
@@ -141,6 +142,10 @@ inputText.addEventListener("click", () => {
     /* prueba con console.log */
     console.log("imput click");
   });
+  /* modalCarrito.addEventListener("click", () => {
+    const agregaAlCarrito =
+
+  }); */
 
 /* Función buscar producto ejecuta luego del evento del "botonBuscar" */
 
@@ -182,6 +187,12 @@ function renderizarProductos() {
 
 renderizarProductos()
 
+/* AGREGAR! función que muestra un modal con el carrito de compras y los productos dentro */
+
+function muestraCarrito() {
+      
+
+}
 
 
 

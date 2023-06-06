@@ -1,3 +1,7 @@
+body {
+  background-color: rgb(245, 245, 242);
+}
+/* Estilos generales del main content de la pagina (cards) */
 .search-container {
     margin-bottom: 20px;
     display: flex;
@@ -35,9 +39,9 @@
   .card {
     width: 300px;
     margin: 10px;
-    padding: 10px;
-    border: 1px solid #080101;
-    border-radius: 15px;
+    padding: 30px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0px;
   }
   
   .carrito {
@@ -48,9 +52,11 @@
 
   .boton-agregar-carrito {
         color: rgb(85, 151, 30);
-
+        font-family:Verdana, Geneva, Tahoma, sans-serif
   }
   
- 
-  
-  
+ /* .img {
+
+ }
+   */
+   /* Agregar estilos Carrito de compras - modal1 */
