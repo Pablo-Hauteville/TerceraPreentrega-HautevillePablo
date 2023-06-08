@@ -124,13 +124,28 @@ const inputText = document.getElementById("searchInput")
 const carritoIcon = document.getElementsByClassName("carrito")[0];
 const containerProductos = document.getElementById ("containerProductos");
 const modalCarrito = document.getElementById("ventanaModal");
-let productosCarrito = []
+/* const agregarAlCarrito = document.getElementsByClassName("boton-agregar-carrito"); */
+const textoCarrito = document.getElementById("texto-carrito");
+
+/* let productosCarrito = []; */
 
 
 const respuestaClick = ()=> {
     console.log("click")
 }
 /* eventos */
+
+
+
+/* A modo de prueba agregue localStorage a un texto,
+ esto solo lo estoy usando para ver si funciona
+ya que tengo el problema con la variable agregarAlCarrito */
+
+textoCarrito.addEventListener("click", () => {
+        localStorage.setItem("productos", JSON.stringify(productos));
+  });
+
+
 
 carritoIcon.addEventListener("click",respuestaClick);
 botonBuscar.addEventListener("click", () => {
@@ -142,10 +157,16 @@ inputText.addEventListener("click", () => {
     /* prueba con console.log */
     console.log("imput click");
   });
-  /* modalCarrito.addEventListener("click", () => {
-    const agregaAlCarrito =
 
-  }); */
+  /* No funciona el evento sin afectar a la función renderizarProductos (-_-) */
+
+/* agregarAlCarrito.addEventListener("click", () => {
+    sessionStorage.setItem("productos", JSON.stringify(productos));
+    
+}); */
+
+
+
 
 /* Función buscar producto ejecuta luego del evento del "botonBuscar" */
 
@@ -182,18 +203,20 @@ function renderizarProductos() {
         `;
 
         containerProductos.appendChild(divCard);
+
+        
     });
 }
 
+
+
 renderizarProductos()
 
-/* AGREGAR! función que muestra un modal con el carrito de compras y los productos dentro */
-
-function muestraCarrito() {
-      
-
-}
 
 
+/* function guardarProductoSessionStorage() {
+    sessionStorage.setItem("producto", JSON.stringify(productosCarrito));
+} */
 
-
+    
+    
